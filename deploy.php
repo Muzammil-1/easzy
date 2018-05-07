@@ -10,6 +10,9 @@ $ftp_password = '10111111';
 $ftp_path = "/public_html";
 // Grab the data from BB's POST service and decode
 $json = stripslashes($_POST['payload']);
+$fp = fopen('deploy_log.txt', 'a');
+	fwrite($fp, $log);
+	fclose($fp);
 $data = json_decode($json);
 // Set some parameters to fetch the correct files
 $uri = $data->repository->absolute_url;
@@ -19,7 +22,7 @@ if($data->commits[0]->branch == $branch){
   $author = $data->commits[0]->author;
 	$comm_msg = $data->commits[0]->message;
 	$log = "\n\n------NEW COMMIT------\n\nAuthor: $author\nMessage: $comm_msg\n\n";
-	$fp = fopen('deploy_log', 'a');
+	$fp = fopen('deploy_log.txt', 'a');
 	fwrite($fp, $log);
 	fclose($fp);
 	// Connect to FTP
