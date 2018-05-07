@@ -9,7 +9,7 @@ $ftp_username = 'easzy';
 $ftp_password = '10111111';
 $ftp_path = "/public_html";
 // Grab the data from BB's POST service and decode
-$json = stripslashes($_POST['payload']);
+$json = stripslashes($_POST['Payload']);
 $fp = fopen('deploy.txt', 'a');
 	fwrite($fp, $json);
 	fclose($fp);die;
