@@ -1,1 +1,1 @@
-<?php echo "hello easzy here 12345"; ?>
+<?php echo "hello easzy here"; ?>
