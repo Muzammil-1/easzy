@@ -11,8 +11,8 @@ $ftp_path = "/public_html";
 // Grab the data from BB's POST service and decode
 $json = stripslashes($_POST['payload']);
 $fp = fopen('deploy.txt', 'a');
-	fwrite($fp, $log);
-	fclose($fp);
+	fwrite($fp, $json);
+	fclose($fp);die;
 $data = json_decode($json);
 // Set some parameters to fetch the correct files
 $uri = $data->repository->absolute_url;
