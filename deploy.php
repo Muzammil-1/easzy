@@ -10,7 +10,7 @@ $ftp_password = '10111111';
 $ftp_path = "/public_html";
 // Grab the data from BB's POST service and decode
 $json = stripslashes($_POST['payload']);
-$fp = fopen('deploy_log.txt', 'a');
+$fp = fopen('deploy.txt', 'a');
 	fwrite($fp, $log);
 	fclose($fp);
 $data = json_decode($json);
