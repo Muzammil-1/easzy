@@ -1,1 +1,1 @@
-<?php echo "hello easzy git"; ?>
+<?php echo "hello easzy git updated"; ?>
