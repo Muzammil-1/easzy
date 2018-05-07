@@ -1,7 +1,7 @@
 <?php
 // Set these dependant on your BB credentials
 $username = 'Muzammil-1';
-$password = 'Khuljat2s@!';
+$password = 'Khuljat2s@1';
 $branch = 'master';
 // FTP Credentials
 $ftp_host = 'files.000webhost.com';
